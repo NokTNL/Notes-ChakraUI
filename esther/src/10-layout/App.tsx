@@ -20,6 +20,8 @@ function App() {
         <Box bg="yellow" w="40%" h="100px" />
       </Flex>
 
+      {/* <Center> goes even further by defaulting its children to be centered (in both axis) within itself. <Square> and <Circle> are <Center>'s with special shape. */}
+
       {/* <Stack> is a <Flex> that adds spacing between its children. Default flex direction is COLUMN
           Pass the "direction" prop ('row' | "column") to specify the direction, or use <HStack> or <VStack> which also have `align-items: center` by default */}
       {/* You can change the `spacing` as well */}
