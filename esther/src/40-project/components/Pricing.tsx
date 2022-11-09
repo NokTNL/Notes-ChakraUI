@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 import {
   Box,
   Button,
@@ -11,12 +11,11 @@ import {
 } from "@chakra-ui/react";
 import { CheckIcon } from "../icons/Icons";
 
-// type StackProps
-
 export function ListItem({ children }: PropsWithChildren) {
   return (
     <HStack as="li" spacing="20px">
-      <Icon as={CheckIcon} boxSize="220px" />
+      {/* using `as` prop of <Icon> disables all functionalities of <Icon> as far as I can tell, should not use it? */}
+      <CheckIcon />
       <Text>{children}</Text>
     </HStack>
   );
