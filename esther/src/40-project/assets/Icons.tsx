@@ -1,7 +1,11 @@
 import { Icon, IconProps } from "@chakra-ui/react";
+import { SVGProps } from "react";
+
+// There are multiple ways to render SVG in Chakra (assuming you don't have CRA that can load SVG as ReactComponent or string URL )
 
 export function CheckIcon(props: IconProps) {
   return (
+    // 1. <Icon> element renders an SVG element. Put <svg> element attirbutes in the <Icon>'s props, and put the <path> content inside as children
     <Icon {...props}>
       <path
         fill-rule="evenodd"
@@ -13,15 +17,17 @@ export function CheckIcon(props: IconProps) {
   );
 }
 
-export function MoneyBackGuaranteeIcon(props: any) {
+// 2. create a component that returns native React svg element. Use it as the `as` prop in Chakra's <Icon> component so we can use <Icon>'s API to tweak the svg's properties
+// REMEMBER to collect props and assign to <svg> here; it is where the Chakra's <Icon> will pass its own props into our svg
+export function MoneyBackGuaranteeIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      {...props}
       width="46"
       height="46"
       viewBox="0 0 46 46"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M23 11L26.09 17.262L33 18.266L28 23.14L29.18 30.022L23 26.772L16.82 30.022L18 23.14L13 18.266L19.91 17.262L23 11Z"
@@ -38,7 +44,7 @@ export function MoneyBackGuaranteeIcon(props: any) {
   );
 }
 
-export function HassleFreeIcon(props: any) {
+export function HassleFreeIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -60,7 +66,7 @@ export function HassleFreeIcon(props: any) {
   );
 }
 
-export function MonthlySubscriptionIcon(props: any) {
+export function MonthlySubscriptionIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

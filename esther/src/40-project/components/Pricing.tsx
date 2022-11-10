@@ -5,16 +5,14 @@ import {
   Flex,
   Heading,
   HStack,
-  Icon,
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { CheckIcon } from "../icons/Icons";
+import { CheckIcon } from "../assets/Icons";
 
 export function ListItem({ children }: PropsWithChildren) {
   return (
     <HStack as="li" spacing="20px">
-      {/* using `as` prop of <Icon> disables all functionalities of <Icon> as far as I can tell, should not use it? */}
       <CheckIcon />
       <Text>{children}</Text>
     </HStack>
