@@ -33,7 +33,7 @@ export function Pricing() {
         "0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)"
       }
     >
-      <Box bg="#F0EAFB" p="60px">
+      <Box bg="purple.50" p="60px">
         <Heading as="h3" fontSize={"24px"} fontWeight="800">
           Premium PRO
         </Heading>
